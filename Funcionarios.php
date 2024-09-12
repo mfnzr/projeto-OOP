@@ -12,8 +12,7 @@ class Funcionarios extends Humano {
     }
 
     public function apresentacao($nome, $salario) {
-        return "Nome funcionário:" . $nome . "\n";
-        return "Salário: " . $salario . "\n";
+        return "nome e salário do funcionário aqui!";
     }
 }
 
