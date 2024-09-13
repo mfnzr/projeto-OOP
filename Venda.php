@@ -8,12 +8,13 @@ class Vendas  {
     public $quantidade;
     public Humano $humano;
 
-    public function __construct($item, $preco, $quantidade) {
+    public function __construct($item, $preco, $quantidade, Humano $humano) {
         $this->item = $item;
         $this->preco = $preco;
         $this->quantidade = $quantidade;
+        $this->humano = $humano;
     }
 
-    public function vendaProdutos($nome, $preco, $quantidade, $humano){
-        return ("Nome: {$nome} " . "\n" . "Preco: {$preco} " . "\n" . "Quantidade: {$quantidade}" . "\n" . "{$humano->nome}");}
+    public function vendaProdutos($item, $preco, $quantidade, $humano){
+        return ("Nome: {$item} " . "\n" . "Preco: {$preco} " . "\n" . "Quantidade: {$quantidade}" . "\n" . "{$humano->nome}");}
 }

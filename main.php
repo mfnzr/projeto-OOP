@@ -21,6 +21,11 @@ require_once 'funcionarioVeterinario.php';
 require_once 'Venda.php';
 require_once 'Produto.php';
 
+
+echo "----------BEM VINDO(A) À CLINICA VETERINÁRIA CODEVET----------";
+echo "\n";
+echo "\n";
+
 //VARIÁVEIS PARA CAPTAÇÃO DE DADOS ANIMAL 1
 echo "----------Nome do Animal 1----------";
 echo "\n";
@@ -47,7 +52,6 @@ echo $animal1->humano->nome . "\n";
 
 
 //VARIÁVEIS PARA CAPTAÇÃO DE DADOS ANIMAL 2
-
 echo "----------Nome do Animal 2----------";
 echo "\n";
 $nomeAnimal2 = readline("Nome do animal: \n");
@@ -74,10 +78,8 @@ echo $animal2->falar();
 echo $animal2->humano->nome . "\n";
 
 
-
 //VARIÁVEIS PARA CAPTAÇÃO DE DADOS ANIMAL 3
 echo "\n";
-
 echo "----------Nome do Animal 3----------";
 echo "\n";
 $nomeAnimal3 = readline("Nome do animal: \n");
@@ -86,7 +88,6 @@ $quantPatas3 = readline("Quantidade de patas: \n");
 $corAnimal3 = readline("cor do animal: \n");
 $pesoAnimal3 = readline("peso do animal:"."\n");
 $tamanhoAnimal3 = readline("tamanho do animal: \n");
-
 echo "\n";
 
 echo "----------Nome do Tutor 3----------";
@@ -110,14 +111,19 @@ echo "\n";
 $nome = "";
 $salario = 0;
 
+echo "----------Funcionários:----------";
+echo "\n";
+echo "----------Balconista:----------";
 $balconista = new Balconista($nome, $salario);
 echo $balconista->apresentacao("Jeremias", 1931.07);
 echo "\n";
 
+echo "----------Vendedora:----------";
 $vendedor = new Vendedor($nome, $salario);
 echo $vendedor->apresentacao("Claudete", 2037.65);
 echo "\n";
 
+echo "----------Veterinário:----------";
 $veterinario = new Veterinario($nome, $salario);
 echo $veterinario->apresentacao("Osvaldo", 4560.23);
 echo "\n";
@@ -128,14 +134,16 @@ $nome = "";
 $preco = 0;
 $quantidade = 0;
 
+echo "----------Venda de produtos:----------";
+echo "\n";
 $venda1 = new Vendas($nome, $preco, $quantidade, $humano1);
-echo $produtos->vendaProdutos("Areia", 20.00, 1,$humano1);
+echo $venda1->vendaProdutos("Areia", 20.00, 1,$humano1);
 echo "\n";
 
 $venda2 = new Vendas($nome, $preco, $quantidade, $humano2);
-echo $produtos->vendaProdutos("Coleira", 32.00, 1,$humano2);
+echo $venda2->vendaProdutos("Coleira", 32.00, 1,$humano2);
 echo "\n";
 
 $venda3 = new Vendas($nome, $preco, $quantidade, $humano3);
-echo $produtos->vendaProdutos("Ração", 15.00, 1,$humano3);
+echo $venda3->vendaProdutos("Ração", 15.00, 1,$humano3);
 echo "\n";
