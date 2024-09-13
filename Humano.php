@@ -12,5 +12,6 @@
             $this->endereco = $endereco;
             $this->contato = $contato;
         }
+
     
     }
